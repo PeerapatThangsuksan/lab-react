@@ -42,7 +42,7 @@ export default class WordCard extends Component{
     }
     render(){
         return (
-            <div>
+            <div align = "center">
                 <h2> This Round : {this.state.attempt} </h2>
                 <h2>{this.state.attempt == 2? 'Try again':''}</h2>
                 <h2>{this.state.attempt == 3? 'Last times ':''}</h2>
