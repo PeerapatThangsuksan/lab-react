@@ -2,13 +2,13 @@
   text-align: center;
 }
 .activeCard {
-  color: red;
-  background: pink;
+  color: rgb(25, 212, 0)(202, 68, 68);
+  background: rgb(2, 255, 255);
 }
 .card {
-  display: inline-block;
+  display: list-item block;
   text-align: center;
-  width: 3em;
+  width: 5em;
   font-size: 2em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
   margin: 1em;
