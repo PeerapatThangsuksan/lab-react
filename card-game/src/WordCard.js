@@ -44,8 +44,10 @@ export default class WordCard extends Component{
         return (
             <div>
                 <h2> This Round : {this.state.attempt} </h2>
-                <h1>{this.state.statusgame? 'You lose' : ''}</h1>
-                <h1>{this.state.completed&&!this.state.statusgame? 'You win' : ''}</h1>
+                <h2>{this.state.attempt == 2? 'Try again':''}</h2>
+                <h2>{this.state.attempt == 3? 'Last times ':''}</h2>
+                <h1>{this.state.statusgame? 'You lose :::: word ans is COMPUTER' : ''}</h1>     
+                <h1>{this.state.completed&&!this.state.statusgame? 'You win ::: congratulations!! ' : ''}</h1>
                 { Array.from(this.state.chars).map((c,i) => <CharacterCard value={c} key={i} attempt ={this.state.attempt} activationHandler={this.activationHandler}/>)}
                 <h3>  Maximum Number of Round : {this.state.Maxplay} </h3>
                 
