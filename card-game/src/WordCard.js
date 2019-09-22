@@ -44,6 +44,8 @@ export default class WordCard extends Component{
     render(){
         return (
             <div align = "center">
+
+                <h1>This is game for education</h1>
                 <h2> This Round : {this.state.attempt} </h2>
                 <button onClick={ (e) => window.location.reload()}>Restart</button>   
                 <h1 className = "win">{this.state.completed&&!this.state.statusgame? 'You win ::: congratulations!! ' : ''}</h1>
