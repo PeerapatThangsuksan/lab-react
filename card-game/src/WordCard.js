@@ -46,8 +46,8 @@ export default class WordCard extends Component{
             <div align = "center">
                 <h2> This Round : {this.state.attempt} </h2>
                 <button onClick={ (e) => window.location.reload()}>Restart</button>   
-                <h1>{this.state.completed&&!this.state.statusgame? 'You win ::: congratulations!! ' : ''}</h1>
-                <h1>{this.state.statusgame? 'You lose :::: Word ans is COMPUTER' : ''}</h1>
+                <h1 className = "win">{this.state.completed&&!this.state.statusgame? 'You win ::: congratulations!! ' : ''}</h1>
+                <h1 className = "lose">{this.state.statusgame? 'You lose :::: Word ans is COMPUTER' : ''}</h1>
                 <h2>{this.state.attempt == 2? 'Try again':''}</h2>
                 <h2>{this.state.attempt == 3? 'Try again | YOU RECEIVE HINTS : C _ _ P _ T _ _ ':''}</h2>
                 <h2>{this.state.attempt == 4? 'Try again | YOU RECEIVE HINTS : C _ _ P _ T _ _ ':''}</h2>

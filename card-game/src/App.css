@@ -15,6 +15,30 @@
   user-select: none;
 }
 
+.win {
+  display: list-item block;
+  text-align: center;
+  width: 15em;
+  font-size: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+  margin: 1em;
+  user-select: none;
+  color: deeppink;
+  background: burlywood;
+}
+
+.lose {
+  display: list-item block;
+  text-align: center;
+  width: 15em;
+  font-size: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+  margin: 1em;
+  user-select: none;
+  color: deeppink;
+  background: burlywood;
+}
+
 .App-logo {
   height: 40vmin;
 }
