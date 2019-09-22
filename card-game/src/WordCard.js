@@ -11,8 +11,9 @@ const prepareStateFromWord = (given_word) => {
         attempt: 1,
         guess: [],
         completed: false,
-        Maxplay : 3 ,
+        Maxplay : 5 ,
         statusgame: false,
+        hint: false
     }
 }
 
@@ -44,11 +45,13 @@ export default class WordCard extends Component{
         return (
             <div align = "center">
                 <h2> This Round : {this.state.attempt} </h2>
-                <h2>{this.state.attempt == 2? 'Try again':''}</h2>
-                <h2>{this.state.attempt == 3? 'Last times ':''}</h2>
-                <h1>{this.state.statusgame? 'You lose :::: word ans is COMPUTER' : ''}</h1> 
                 <button onClick={ (e) => window.location.reload()}>Restart</button>   
                 <h1>{this.state.completed&&!this.state.statusgame? 'You win ::: congratulations!! ' : ''}</h1>
+                <h1>{this.state.statusgame? 'You lose :::: Word ans is COMPUTER' : ''}</h1>
+                <h2>{this.state.attempt == 2? 'Try again':''}</h2>
+                <h2>{this.state.attempt == 3? 'Try again | YOU RECEIVE HINTS : C _ _ P _ T _ _ ':''}</h2>
+                <h2>{this.state.attempt == 4? 'Try again | YOU RECEIVE HINTS : C _ _ P _ T _ _ ':''}</h2>
+                <h2>{this.state.attempt == 5? 'Last times | YOU RECEIVE HINTS : C _ _ P _ T _ _ ':''}</h2>
                 { Array.from(this.state.chars).map((c,i) => <CharacterCard value={c} key={i} attempt ={this.state.attempt} activationHandler={this.activationHandler}/>)}
                 <h3>  Maximum Number of Round : {this.state.Maxplay} </h3>  
             </div>
